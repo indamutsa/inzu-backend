@@ -14,7 +14,7 @@ services:
     depends_on:
       - inzu_api
     ports:
-      - 80:80
+      - 8080:80
   inzu_api:
     #image: python:3.6
     container_name: "inzu_api"
