@@ -16,7 +16,8 @@ pyenv
 inzu/settings.py
 inzu/settings/prod.py
 inzu/debug.log
-
+docker-compose.yml
+inzu/settings/dev.py
 
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
