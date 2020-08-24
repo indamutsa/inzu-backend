@@ -2,6 +2,7 @@ version: "3"
 volumes:
   pgdata:
   static:
+  media:
 services:
   ngnix:
     build:
@@ -11,6 +12,7 @@ services:
       - DJANGO_SETTINGS_MODE=inzu.settings.prod
     volumes:
       - static:/static
+      - media:/media
     depends_on:
       - inzu_api
     ports:
@@ -24,6 +26,7 @@ services:
     volumes:
       - .:/inzu-backend
       - static:/static
+      - media:/media
     ports:
       - 8000:8000
     command: gunicorn -w 4 inzu.wsgi -b 0.0.0.0:8000

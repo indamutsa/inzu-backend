@@ -4,6 +4,9 @@ FROM python:3.6
 COPY ./docker/prod/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
+#Make a gunicorn folder where we will get logs of server access
+RUN mkdir -p /var/log/gunicorn
+
 # Copy the local codebase into docker container
 COPY . /inzu-backend
 

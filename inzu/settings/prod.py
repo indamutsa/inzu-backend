@@ -2,9 +2,9 @@ from inzu.settings.base import *  # NOQA
 
 SECRET_KEY = 'HFSDJKFHWEHIRFHBDSJI&*njJDSJF*6763274&^&$#%&^*SHKFJDHSFK'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
 
-DEBUG = False
+DEBUG = True
 
 
 STATIC_URL = '/static/'
